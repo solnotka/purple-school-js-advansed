@@ -8,4 +8,6 @@ const arrFromObj = [
 
 const idSet = new Set(arrFromObj.map((item) => item.id));
 
-const res = [...idSet].map((setId) => arrFromObj.find((item) => item.id === setId))
+const res = [...idSet].map((setId) => arrFromObj.find((item) => item.id === setId));
+
+console.log(res);

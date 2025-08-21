@@ -1,11 +1,20 @@
 "use strict";
 
-const arrFromObj = [
-{ id: 1, name: 'Вася' },
-{ id: 2, name: 'Петя' },
-{ id: 1, name: 'Вася' },
-]
+function rollDice(type) {
+    const availableDices = ['d4', 'd6', 'd8', 'd10', 'd12', 'd16', 'd20'];
 
-const idSet = new Set(arrFromObj.map((item) => item.id));
+    if (!availableDices.includes(type)) {
+        return 'Этот кубик кинуть невозможно';
+    }
 
-const res = [...idSet].map((setId) => arrFromObj.find((item) => item.id === setId))
+    const dice = Number(type.slice(1));
+
+    return Math.floor(Math.random() * dice + 1)
+}
+
+console.log(rollDice('d1'));
+console.log(rollDice("d6"));
+console.log(rollDice("d8"));
+console.log(rollDice("d20"));
+console.log(rollDice("d4"));
+console.log(rollDice("d4"));

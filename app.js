@@ -1,21 +1,11 @@
-'use strict';
+"use strict";
 
-const flights = ['Russia', 'USA', 'London',  'London', 'USA'];
+const arrFromObj = [
+{ id: 1, name: 'Вася' },
+{ id: 2, name: 'Петя' },
+{ id: 1, name: 'Вася' },
+]
 
-const setFlights = new Set(flights);
-console.log(setFlights);
-console.log(setFlights.size);
-console.log(setFlights.has('Russia'));
-setFlights.add('Paris');
-setFlights.delete('London');
-console.log(setFlights);
+const idSet = new Set(arrFromObj.map((item) => item.id));
 
-for (const flight of setFlights) {
-	console.log(flight);
-}
-
-console.log([...setFlights]);
-
-const setObj = new Set([{ a: 1 }, { b: 2 }, { b: 2 }]);
-console.log(setObj);
-console.log(new Set('abcd'));
+const res = [...idSet].map((setId) => arrFromObj.find((item) => item.id === setId))

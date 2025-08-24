@@ -63,9 +63,9 @@ const newYearTimer = () => {
   )}`;
 };
 
+const timer = document.createElement("h1");
+document.body.appendChild(timer);
+
 const interval = setInterval(() => {
   timer.textContent = newYearTimer();
 }, 1000);
-
-const timer = document.createElement("h1");
-document.body.appendChild(timer);

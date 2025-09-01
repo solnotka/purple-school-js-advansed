@@ -27,10 +27,3 @@ class User {
         } else console.log('Ошибка')
     }
 }
-
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> dcc9e5c (new ex)

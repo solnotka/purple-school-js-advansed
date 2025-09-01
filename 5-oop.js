@@ -17,11 +17,11 @@ const Ork = function (name, weapon) {
   return instance;
 };
 
-const brr = new Ork("Brr", "hammer");
+// const brr = new Ork("Brr", "hammer");
 
-console.log(brr.__proto__);
-brr.speak();
-brr.hit();
+// console.log(brr.__proto__);
+// brr.speak();
+// brr.hit();
 
 const Elf = function(name, castType) {
     const instance = new Pers('elf', name, 'elvish');
@@ -32,8 +32,8 @@ const Elf = function(name, castType) {
     return instance;
 }
 
-const aou = new Elf("Aou", "poison");
+// const aou = new Elf("Aou", "poison");
 
-console.log(aou.__proto__);
-aou.speak();
-aou.cast();
+// console.log(aou.__proto__);
+// aou.speak();
+// aou.cast();

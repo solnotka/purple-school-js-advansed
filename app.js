@@ -29,3 +29,8 @@ class User {
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> dcc9e5c (new ex)

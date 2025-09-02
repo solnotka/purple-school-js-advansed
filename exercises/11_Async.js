@@ -1,5 +1,3 @@
-let data;
-
 const request = new XMLHttpRequest();
 request.open("GET", "https://dummyjson.com/products");
 request.send();

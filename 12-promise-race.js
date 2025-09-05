@@ -1,6 +1,6 @@
 async function race(arr) {
     return new Promise((resolve, reject) => {
-        Promise.allSettled(arr.forEach(p => p.then(res => resolve(res)).catch(e => reject(e))));
+        arr.forEach(p => p.then(resolve, reject))
     })
     }
 

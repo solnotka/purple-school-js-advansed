@@ -10,6 +10,7 @@ button {
     color: white;
     border-color: white;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .activities {
@@ -17,6 +18,7 @@ button {
     margin-left: 10%;
     padding: 20px 30px;
     width: 50%;
+    display: flex;
     justify-self: center;
 }
 

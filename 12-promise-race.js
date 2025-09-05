@@ -1,11 +1,11 @@
 async function race(arr) {
     return new Promise((resolve) => {
-        Promise.all(arr.map(p => resolve(p)));
+        Promise.allSettled(arr.map(p => p.then(res => resolve(res))));
     })
     }
 
 const products = race([
-  fetch("https://dummyjson.com/products/1000"),
+  fetch("https://dummyjson.com/products/10000"),
   fetch("https://dummyjson.com/products/20"),
   fetch("https://dummyjson.com/products/30"),
   fetch("https://dummyjson.com/products/40"),
@@ -18,7 +18,7 @@ const products = race([
 ]);
 
 const productsOfBox = Promise.race([
-  fetch("https://dummyjson.com/products/1000"),
+  fetch("https://dummyjson.com/products/100000"),
   fetch("https://dummyjson.com/products/20"),
   fetch("https://dummyjson.com/products/30"),
   fetch("https://dummyjson.com/products/40"),

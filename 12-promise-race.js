@@ -1,8 +1,18 @@
 async function race(arr) {
-    return new Promise((resolve) => {
-        Promise.allSettled(arr.map(p => p.then(res => resolve(res))));
-    })
-    }
+  return new Promise((resolve, reject) => {
+   for (let promise of arr) {
+    let stop;
+    promise.then(res => {
+        resolve(res);
+    }).catch(e => {
+        reject(e)
+    }).finally(
+        stop = true
+    )
+    if(stop) break;
+   }
+  });
+}
 
 const products = race([
   fetch("https://dummyjson.com/products/10000"),

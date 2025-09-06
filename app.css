@@ -27,3 +27,20 @@ button {
     color: rgb(238, 223, 223);
     font-size: 18px;
 }
+
+.wrapper {
+    margin: 50px;
+}
+
+.wrapper input {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #6C38CC;
+    margin-bottom: 30px;
+}
+
+.example {
+    color: white;
+    font-size: 14px;
+}

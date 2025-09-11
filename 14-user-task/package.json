@@ -1,0 +1,28 @@
+{
+  "name": "14-user-task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "live-server",
+    "build": "rollup index.js --file bundle.js --format iife"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github.com/solnotka.git"
+  },
+  "keywords": [
+    "package"
+  ],
+  "author": "solnotka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/github.com/solnotka/issues"
+  },
+  "homepage": "https://github.com/github.com/solnotka#readme",
+  "description": "",
+  "dependencies": {
+    "live-server": "^1.2.0",
+    "rollup": "^4.50.1"
+  }
+}
